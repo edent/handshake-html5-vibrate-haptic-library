@@ -1,6 +1,6 @@
 # HandShake
 
-Handshake is a Haptic Effects Library which uses HTML5's Vibrate API.
+HandShake is a Haptic Effects Library which uses HTML5's Vibrate API.
 
 We encourage you to submit interesting and useful vibration patterns as pull requests.
 
