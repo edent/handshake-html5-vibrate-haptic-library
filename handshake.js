@@ -64,7 +64,7 @@ function heartBeat(repeat, speed)	//	Simulate a beating heart
 
 function clunkClick()	//	Suitable for an "error" vibration.
 {
-	navigator.vibrate([40,80, 100]);
+	navigator.vibrate([40, 80, 100]);
 }
 
 function lite(repeat)	//	A gentle vibration. We cannot set the intensity, this is a good compromise.
