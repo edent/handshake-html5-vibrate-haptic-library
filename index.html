@@ -3,24 +3,25 @@
 <head>
 	<meta charset=utf-8>
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<title>Haptic Effect Demo - from The Lab</title>
+	<title>Haptic Effect Demo Library</title>
 
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="haptic.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/picnic.min.css">
+	<script type="text/javascript" src="handshake.js"></script>
+	<style>
+		main {
+			max-width: 38rem;
+			padding: 2rem;
+			margin: auto;
+		}
+	</style>
 </head>
 <body>
-	<header>
-		<h1><a href="https://thelab.o2.com/">The Lab</a></h1>
-		<div id="menu">
-			<a href="https://github.com/dogfood20/haptic" class="menu-button">Fork me on Github</a>
-		</div>
-	</header>
-	<section>
-		<h1>Haptic Effect Demo<br />from The Lab</h1>
-		<hr class="wide"/>
-		<h3>Currently working on Firefox Mobile, Firefox for Android, Chrome (beta) for Android.</h3>
-		<hr class="wide"/>
+	<main>
+		<h1>Haptic Effects Demo Library</h1>
+		<a href="https://github.com/edent/handshake-html5-vibrate-haptic-library" class="menu-button">Fork me on Github</a>
+		<hr/>
+		<h3>Currently working on Firefox and Chrome for Android.</h3>
+		<hr/>
 		<h2>SMS</h2>
 		<h3>Notify the user of an incoming message</h3>
 			<button onclick="sms();">SMS</button>
@@ -64,18 +65,9 @@
 
 		<h2>Shave &amp; A Hair Cut...</h2>
 			<button onclick="shaveAndAHairCut();">...two bits!</button>
-		<hr class="wide"/>
-	</section>
+		<hr/>
+	</main>
 	<footer>
-		<div id="footer-menu" role="navigation">
-			<a href="https://thelab.o2.com/who-we-are/" class="footer-button">Who we are</a>
-			<a href="https://thelab.o2.com/category/projects/" class="footer-button">Projects</a>
-			<a href="https://thelab.o2.com/category/events/" class="footer-button">Events</a>
-			<a href="https://thelab.o2.com/category/opinion/" class="footer-button">Opinion</a>
-			<a href="https://thelab.o2.com/category/case-studies/" class="footer-button">Cast Studies</a>
-			<a href="https://thelab.o2.com/category/about-us/" class="footer-button">About Us</a>
-		</div>
-		<p>All content © 2014, the Lab is a trade mark of Telefónica UK Limited. Telefónica UK Limited, 260 Bath Road, Slough, Berkshire SL14DX. Registered in England No. 1743099.</p>
 	</footer>
 </body>
 </html>

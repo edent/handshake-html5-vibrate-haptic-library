@@ -1,10 +1,11 @@
 /*
-*	Haptic Library from The Lab - Powered by O2
+*	Haptic Library. Originally from The Lab - Powered by O2
 *	MIT License.
 *
 *	This library provides a set of vibration patterns suitable for various events.
 *	The HTML Vibrate API only works on devices with a built in vibrator (usually phones and tablets).
 *	navigator.vibrate() currently has limited support.
+*	https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate
 */
 
 /*
@@ -14,12 +15,13 @@
 *	Odd elements in the array represent time when the vibration is paused.
 *	navigator.vibrate([200, 100, 500]); means vibrate for 200ms, pause for 100ms, vibrate for 500ms.
 *	There is no way to control the intensity of the vibration.
+*	Full specification https://w3c.github.io/vibration/
 */
 
 //	Set up the HTML5 Vibrate API using vendor prefixes
 navigator.vibrate = navigator.vibrate ||
 					navigator.webkitVibrate ||
-					navigator.mozVibrate || 
+					navigator.mozVibrate ||
 					navigator.msVibrate;
 
 //	A variety of vibration patterns
@@ -29,9 +31,9 @@ function sms() 	//	Vibrate with the old style Nokia pattern; ...--... (Morse cod
 	pause = 100;
 	dot   = pause*2;
 	dash  = dot*3;
-	navigator.vibrate([dot, pause, dot, pause, dot, 
-		               pause*2, dash, pause, dash, 
-		               pause*2, dot, pause, dot, pause, dot]);	
+	navigator.vibrate([dot, pause, dot, pause, dot,
+		               pause*2, dash, pause, dash,
+		               pause*2, dot, pause, dot, pause, dot]);
 }
 
 function heartBeat(repeat, speed)	//	Simulate a beating heart
@@ -42,7 +44,7 @@ function heartBeat(repeat, speed)	//	Simulate a beating heart
 
 	//	Create the array of vibration patterns
 	var pattern = [];
-	
+
 	//	Fill the array the specified number of times
 	for (var i = 0; i < repeat ; i++)
 	{
@@ -55,14 +57,14 @@ function heartBeat(repeat, speed)	//	Simulate a beating heart
 		pattern.push(10);
 		pattern.push(speed);
 	}
-	
+
 	//	Start vibrating
-	navigator.vibrate(pattern);	
+	navigator.vibrate(pattern);
 }
 
 function clunkClick()	//	Suitable for an "error" vibration.
 {
-	navigator.vibrate([40,80, 100]);	
+	navigator.vibrate([40,80, 100]);
 }
 
 function lite(repeat)	//	A gentle vibration. We cannot set the intensity, this is a good compromise.
@@ -72,14 +74,14 @@ function lite(repeat)	//	A gentle vibration. We cannot set the intensity, this i
 
 	//	Create the array of vibration patterns
 	var pattern = [];
-	
+
 	//	Fill the array the specified number of times
 	for (var i = 0; i < repeat; i++)
 	{
 		pattern.push(5);
 		pattern.push(10);
 	}
-	
+
 	//	Start vibrating
 	navigator.vibrate(pattern);
 }
@@ -91,14 +93,14 @@ function medium(repeat)	//	A medium vibration. We cannot set the intensity, this
 
 	//	Create the array of vibration patterns
 	var pattern = [];
-	
+
 	//	Fill the array the specified number of times
 	for (var i = 0; i < repeat; i++)
 	{
 		pattern.push(50);
 		pattern.push(10);
 	}
-	
+
 	//	Start vibrating
 	navigator.vibrate(pattern);
 }
@@ -121,7 +123,7 @@ function waiting(repeat)	//	Suitable for indicating that the device is waiting.
 
 	//	Create the array of vibration patterns
 	var pattern = [];
-	
+
 	//	Fill the array the specified number of times
 	for (var i = 0; i < repeat; i++)
 	{
@@ -129,7 +131,7 @@ function waiting(repeat)	//	Suitable for indicating that the device is waiting.
 		pattern.push(50); pattern.push(100);
 		pattern.push(50); pattern.push(1000);
 	}
-	
+
 	//	Start vibrating
 	navigator.vibrate(pattern);
 }
